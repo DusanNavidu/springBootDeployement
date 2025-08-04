@@ -1,5 +1,6 @@
 package lk.ijse.gdse72.springbootdeployement.Service.impl;
 
+import lk.ijse.gdse72.springbootdeployement.Repository.CustomerRepository;
 import lk.ijse.gdse72.springbootdeployement.Service.customerService;
 import lk.ijse.gdse72.springbootdeployement.entity.Customer;
 import lombok.RequiredArgsConstructor;
@@ -13,9 +14,9 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class customerServiceImpl implements customerService {
-    private final lk.ijse.gdse72.springbootdeployement.Repository.CustomerRepository CustomerRepository;
+    private final CustomerRepository customerRepository;
     @Override
     public Customer saveCustomer(Customer customer) {
-        return CustomerRepository.save(customer);
+        return customerRepository.save(customer);
     }
 }
