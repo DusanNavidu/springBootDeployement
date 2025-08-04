@@ -23,6 +23,7 @@ public class CustomerController {
         return "customer1";
     }
 
+
     @PostMapping("register")
     public ResponseEntity<Customer> registerCustomer(@RequestBody @Valid Customer Customer) {
         return ResponseEntity.ok(service.saveCustomer(Customer));
