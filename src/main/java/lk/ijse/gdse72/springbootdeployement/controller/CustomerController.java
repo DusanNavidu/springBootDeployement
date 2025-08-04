@@ -17,6 +17,7 @@ public class CustomerController {
         return "List of all customers";
     }
 
+
     @PostMapping("/create")
     public Customer createCustomer(@RequestBody @Valid Customer customer) {
         return customer;
